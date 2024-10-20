@@ -1,0 +1,62 @@
+﻿@model GradeHub.Models.Quote
+
+@{
+    ViewData["Title"] = "Daily Quotes";
+}
+
+<div class="container text-center">
+    <div class="quote-box mt-5 p-5">
+        <blockquote class="quote-text">
+            @Model.text
+        </blockquote>
+        <p class="quote-author">
+            - @Model.author
+        </p>
+    </div>
+</div>
+
+<style>
+    .quote-box {
+        background-image: url('@Url.Content("~/image/bgQoutes.png")');
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 90px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+        width: 600px;
+        height: 400px; 
+        padding: 40px 60px; 
+        margin: 0 auto;
+        text-align: center;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        position: relative; 
+    }
+
+    .quote-text {
+        font-size: 24px;
+        font-style: italic;
+        color: #343a40;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        margin: 50px;
+    }
+
+    .quote-author {
+        font-size: 18px;
+        color: #6c757d;
+        font-weight: bold;
+        position: absolute; 
+        bottom: 5px; 
+        left: 0; 
+        right: 0; 
+        text-align: center; 
+    }
+
+    body {
+        background-image: url('@Url.Content("~/image/emsna.png")');
+        background-size: cover;
+        background-position: center;
+    }
+</style>

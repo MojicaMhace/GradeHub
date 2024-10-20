@@ -46,7 +46,7 @@ namespace GradeHub.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(Credentials credentials)
         {
-            string apiUrl = "https://localhost:1257/api/user";
+            string apiUrl = "https://localhost:7198/api/user";
             using (HttpClient client = new HttpClient())
             {
                 StringContent content = new StringContent(JsonConvert.SerializeObject(credentials), Encoding.UTF8, "application/json");

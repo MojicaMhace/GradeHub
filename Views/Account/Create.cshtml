@@ -4,12 +4,21 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Records</h1>
+<style>
+    body {
+        background-image: url('@Url.Content("~/image/pupbg.png")');
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+</style>
 
-<h4>Adding New Records</h4>
+<h1 style="color: white;">Records</h1>
+
+<h4 style="color: white;">Adding New Records</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4,  style="color: white;">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -27,6 +36,8 @@
                 <input asp-for="Average" class="form-control" />
                 <span asp-validation-for="Average" class="text-danger"></span>
             </div>
+            <br />
+            <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -39,5 +50,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
